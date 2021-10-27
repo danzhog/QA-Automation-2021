@@ -6,15 +6,27 @@ namespace Homework2._1
     {
         static void Main(string[] args)
         {
-            string Str = args[0].ToLower();
-            Console.Write("Вариант 1: как только два символа подряд одинаковые, то заканчиваем подсчет\n");
+            string startString = args[0];
+            Console.Write("Вариант 1: Подстрока, состоящая из НЕуникальных неодинаковых символов, " +
+                "расположенных последовательно в строке\n");
+            Console.Write($"Введена строка: " + startString + "\n");
 
+            int numberOfNonUniqueElements = GetNumberOfDifferentNonUniqueElements(startString);
+
+            Console.WriteLine($"максимальная последовательность неодинаковых " +
+                $"НЕуникальных элементов  = {numberOfNonUniqueElements}");
+            Console.ReadKey();
+        }
+
+        static int GetNumberOfDifferentNonUniqueElements(string str)
+        {
+            string Str = str.ToLower();
             int Counter = 1;
             int MaxCounter = 0;
 
             for (int i = 1; i < Str.Length; i++)
             {
-                if (Str[i] != Str[i-1])
+                if (Str[i] != Str[i - 1])
                 {
                     Counter++;
                     if (Counter > MaxCounter)
@@ -33,8 +45,8 @@ namespace Homework2._1
                     Counter = 1;
                 }
             }
-            Console.WriteLine($"максимальное количество неодинаковых элементов, следующих друг за другом = {MaxCounter}");
-            Console.ReadKey();
+            
+            return MaxCounter;
         }
     }
 }

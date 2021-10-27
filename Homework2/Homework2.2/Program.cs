@@ -6,8 +6,18 @@ namespace Homework2._2
     {
         static void Main(string[] args)
         {
-            string Str = args[0].ToLower();
-            Console.Write("Вариант 2: ни один символ в строке не должен повторяться\n");
+            string startString = args[0];
+            Console.Write($"Вариант 2: Подстрока, состоящая из уникальных неодинаковых символов, " +
+                "расположенных последовательно в строке " + startString + "\n");
+            int numberOfUniqeElements = GetNumberOfDifferentUniqueElements(startString);
+            Console.WriteLine($"максимальная последовательность " +
+                $"неодинаковых уникальных элементов = {numberOfUniqeElements}");
+            Console.ReadKey();
+        }
+
+        static int GetNumberOfDifferentUniqueElements(string str)
+        {
+            string Str = str.ToLower();
 
             int Counter = 1;
             int MaxCounter = 0;
@@ -41,8 +51,7 @@ namespace Homework2._2
                 Counter++;
             }
 
-            Console.WriteLine($"максимальная последовательность неодинаковых элементов = {MaxCounter}");
-            Console.ReadKey();
+            return MaxCounter;
         }
     }
 }

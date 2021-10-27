@@ -1,0 +1,14 @@
+C:\Users\Данила\source\repos\Homework2\Homework2.2\bin\Debug\netcoreapp3.1\Homework2.2.exe
+C:\Users\Данила\source\repos\Homework2\Homework2.2\bin\Debug\netcoreapp3.1\Homework2.2.deps.json
+C:\Users\Данила\source\repos\Homework2\Homework2.2\bin\Debug\netcoreapp3.1\Homework2.2.runtimeconfig.json
+C:\Users\Данила\source\repos\Homework2\Homework2.2\bin\Debug\netcoreapp3.1\Homework2.2.runtimeconfig.dev.json
+C:\Users\Данила\source\repos\Homework2\Homework2.2\bin\Debug\netcoreapp3.1\Homework2.2.dll
+C:\Users\Данила\source\repos\Homework2\Homework2.2\bin\Debug\netcoreapp3.1\Homework2.2.pdb
+C:\Users\Данила\source\repos\Homework2\Homework2.2\obj\Debug\netcoreapp3.1\Homework2.2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Данила\source\repos\Homework2\Homework2.2\obj\Debug\netcoreapp3.1\Homework2.2.AssemblyInfoInputs.cache
+C:\Users\Данила\source\repos\Homework2\Homework2.2\obj\Debug\netcoreapp3.1\Homework2.2.AssemblyInfo.cs
+C:\Users\Данила\source\repos\Homework2\Homework2.2\obj\Debug\netcoreapp3.1\Homework2.2.csproj.CoreCompileInputs.cache
+C:\Users\Данила\source\repos\Homework2\Homework2.2\obj\Debug\netcoreapp3.1\Homework2.2.dll
+C:\Users\Данила\source\repos\Homework2\Homework2.2\obj\Debug\netcoreapp3.1\Homework2.2.pdb
+C:\Users\Данила\source\repos\Homework2\Homework2.2\obj\Debug\netcoreapp3.1\Homework2.2.genruntimeconfig.cache
+C:\Users\Данила\source\repos\Homework2\Homework2.2\obj\Debug\netcoreapp3.1\Homework2.2.csproj.AssemblyReference.cache

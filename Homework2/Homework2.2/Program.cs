@@ -6,10 +6,10 @@ namespace Homework2._2
     {
         static void Main(string[] args)
         {
-            string startString = args[0];
+            string givenString = args[0];
             Console.Write($"Вариант 2: Подстрока, состоящая из уникальных неодинаковых символов, " +
-                "расположенных последовательно в строке " + startString + "\n");
-            int numberOfUniqeElements = GetNumberOfDifferentUniqueElements(startString);
+                "расположенных последовательно в строке " + givenString + "\n");
+            int numberOfUniqeElements = GetNumberOfDifferentUniqueElements(givenString);
             Console.WriteLine($"максимальная последовательность " +
                 $"неодинаковых уникальных элементов = {numberOfUniqeElements}");
             Console.ReadKey();

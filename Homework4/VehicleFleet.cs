@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Homework4
 {
@@ -36,6 +34,7 @@ namespace Homework4
                 if (vehicle != null)
                 {
                     Console.WriteLine(vehicle.GetFullInfo());
+                    Console.WriteLine("\n");
                 }
             }
         }

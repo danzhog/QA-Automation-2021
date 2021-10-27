@@ -1,0 +1,14 @@
+C:\Users\Данила\source\repos\Test20october2021\Test20october2021\bin\Debug\netcoreapp3.1\Test20october2021.exe
+C:\Users\Данила\source\repos\Test20october2021\Test20october2021\bin\Debug\netcoreapp3.1\Test20october2021.deps.json
+C:\Users\Данила\source\repos\Test20october2021\Test20october2021\bin\Debug\netcoreapp3.1\Test20october2021.runtimeconfig.json
+C:\Users\Данила\source\repos\Test20october2021\Test20october2021\bin\Debug\netcoreapp3.1\Test20october2021.runtimeconfig.dev.json
+C:\Users\Данила\source\repos\Test20october2021\Test20october2021\bin\Debug\netcoreapp3.1\Test20october2021.dll
+C:\Users\Данила\source\repos\Test20october2021\Test20october2021\bin\Debug\netcoreapp3.1\Test20october2021.pdb
+C:\Users\Данила\source\repos\Test20october2021\Test20october2021\obj\Debug\netcoreapp3.1\Test20october2021.csproj.AssemblyReference.cache
+C:\Users\Данила\source\repos\Test20october2021\Test20october2021\obj\Debug\netcoreapp3.1\Test20october2021.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Данила\source\repos\Test20october2021\Test20october2021\obj\Debug\netcoreapp3.1\Test20october2021.AssemblyInfoInputs.cache
+C:\Users\Данила\source\repos\Test20october2021\Test20october2021\obj\Debug\netcoreapp3.1\Test20october2021.AssemblyInfo.cs
+C:\Users\Данила\source\repos\Test20october2021\Test20october2021\obj\Debug\netcoreapp3.1\Test20october2021.csproj.CoreCompileInputs.cache
+C:\Users\Данила\source\repos\Test20october2021\Test20october2021\obj\Debug\netcoreapp3.1\Test20october2021.dll
+C:\Users\Данила\source\repos\Test20october2021\Test20october2021\obj\Debug\netcoreapp3.1\Test20october2021.pdb
+C:\Users\Данила\source\repos\Test20october2021\Test20october2021\obj\Debug\netcoreapp3.1\Test20october2021.genruntimeconfig.cache

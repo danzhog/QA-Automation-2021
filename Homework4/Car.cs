@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Homework4
+﻿namespace Homework4
 {
     class Car: Vehicle
     {

@@ -16,7 +16,7 @@ namespace Homework4
 
         public override string GetFullInfo() //вывод всей информации о ТС
         {
-            return "Car " + ModelName + " with an Engine Capacity of " + EngineCapacity + " liters, Transmission Type of "
+            return "Motorcycle " + ModelName + " with an Engine Capacity of " + EngineCapacity + " liters, Transmission Type of "
                 + TransmissionType + ", Maximum Speed of " + MaxSpeed + "km/h and has "
                 + NumberOfWheels + " wheels";
         }

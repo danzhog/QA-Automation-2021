@@ -6,12 +6,12 @@ namespace Homework2._1
     {
         static void Main(string[] args)
         {
-            string startString = args[0];
+            string givenString = args[0];
             Console.Write("Вариант 1: Подстрока, состоящая из НЕуникальных неодинаковых символов, " +
                 "расположенных последовательно в строке\n");
-            Console.Write($"Введена строка: " + startString + "\n");
+            Console.Write($"Введена строка: " + givenString + "\n");
 
-            int numberOfNonUniqueElements = GetNumberOfDifferentNonUniqueElements(startString);
+            int numberOfNonUniqueElements = GetNumberOfDifferentNonUniqueElements(givenString);
 
             Console.WriteLine($"максимальная последовательность неодинаковых " +
                 $"НЕуникальных элементов  = {numberOfNonUniqueElements}");

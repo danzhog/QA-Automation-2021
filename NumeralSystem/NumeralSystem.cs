@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+
 namespace NumeralSystem
 {
     class NumeralSystem
@@ -27,6 +28,12 @@ namespace NumeralSystem
             }
         }
 
+        /// <summary>
+        /// Converts a decimal integer into a new base number system from 2 to 20
+        /// </summary>
+        /// <param name="number"> Number to convert </param>
+        /// <param name="newBase"> New base </param>
+        /// <returns> Number in a new base as a string </returns>
         static string ConvertNumberToANewBase(int number, byte newBase)
         {
             if (newBase < minBase || newBase > maxBase || number < 0)
@@ -47,6 +54,11 @@ namespace NumeralSystem
             return convertedNumber.ToString();
         }
 
+        /// <summary>
+        /// Converts a number into new base's symbol (if it needed)
+        /// </summary>
+        /// <param name="num"> Number to convert </param>
+        /// <returns> A new converted symbol of new base to use it in converting as a char </returns>
         static char ConvertNumberToANewBaseSymbol(int num)
         {
             if (num > 9)

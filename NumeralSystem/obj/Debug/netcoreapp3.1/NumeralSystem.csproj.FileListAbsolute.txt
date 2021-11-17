@@ -1,0 +1,14 @@
+C:\Users\Данила\source\repos\NumeralSystem\bin\Debug\netcoreapp3.1\NumeralSystem.exe
+C:\Users\Данила\source\repos\NumeralSystem\bin\Debug\netcoreapp3.1\NumeralSystem.deps.json
+C:\Users\Данила\source\repos\NumeralSystem\bin\Debug\netcoreapp3.1\NumeralSystem.runtimeconfig.json
+C:\Users\Данила\source\repos\NumeralSystem\bin\Debug\netcoreapp3.1\NumeralSystem.runtimeconfig.dev.json
+C:\Users\Данила\source\repos\NumeralSystem\bin\Debug\netcoreapp3.1\NumeralSystem.dll
+C:\Users\Данила\source\repos\NumeralSystem\bin\Debug\netcoreapp3.1\NumeralSystem.pdb
+C:\Users\Данила\source\repos\NumeralSystem\obj\Debug\netcoreapp3.1\NumeralSystem.csproj.AssemblyReference.cache
+C:\Users\Данила\source\repos\NumeralSystem\obj\Debug\netcoreapp3.1\NumeralSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Данила\source\repos\NumeralSystem\obj\Debug\netcoreapp3.1\NumeralSystem.AssemblyInfoInputs.cache
+C:\Users\Данила\source\repos\NumeralSystem\obj\Debug\netcoreapp3.1\NumeralSystem.AssemblyInfo.cs
+C:\Users\Данила\source\repos\NumeralSystem\obj\Debug\netcoreapp3.1\NumeralSystem.csproj.CoreCompileInputs.cache
+C:\Users\Данила\source\repos\NumeralSystem\obj\Debug\netcoreapp3.1\NumeralSystem.dll
+C:\Users\Данила\source\repos\NumeralSystem\obj\Debug\netcoreapp3.1\NumeralSystem.pdb
+C:\Users\Данила\source\repos\NumeralSystem\obj\Debug\netcoreapp3.1\NumeralSystem.genruntimeconfig.cache

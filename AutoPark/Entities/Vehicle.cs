@@ -17,5 +17,11 @@ namespace AutoPark
             this.transmission = transmission;
             this.chassis = chassis;
         }
+
+        public virtual string GetFullInfo()
+        {
+            return "This vehicle has " + engine.power + " engine, " 
+                + transmission.madeBy + " transmission, " + chassis.loadCapacity + " chassis capacity";
+        }
     }
 }

@@ -20,7 +20,7 @@ namespace AutoPark
 
         public virtual string GetFullInfo()
         {
-            return "This vehicle has " + engine.power + " engine, " 
+            return "has " + engine.engineType + " engine, " 
                 + transmission.madeBy + " transmission, " + chassis.loadCapacity + " chassis capacity";
         }
     }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AutoPark.Enums
+﻿namespace AutoPark.Enums
 {
     public enum EngineType
     {

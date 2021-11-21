@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AutoPark.Modules
+﻿namespace AutoPark.Modules
 {
     class Chassis
     {
@@ -15,6 +11,12 @@ namespace AutoPark.Modules
             this.numberOfWheels = numberOfWheels;
             this.serialNumber = serialNumber;
             this.loadCapacity = loadCapacity;
+        }
+
+        public string GetInfo()
+        {
+            return $"{numberOfWheels} wheels, load capaity: {loadCapacity} kg, " +
+                $"serial number: {serialNumber}";
         }
     }
 }

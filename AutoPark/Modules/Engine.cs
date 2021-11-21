@@ -1,8 +1,5 @@
 ﻿using AutoPark.Enums;
 using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace AutoPark.Modules
 {
     class Engine
@@ -10,14 +7,20 @@ namespace AutoPark.Modules
         public int power;
         public int volume;
         public string serialNumber;
-        public EngineType engineType;
+        public EngineType type;
 
-        public Engine(int power, int volume, string serialNumber, EngineType engineType) 
+        public Engine(int power, int volume, string serialNumber, EngineType type) 
         {
             this.power = power;
             this.volume = volume;
             this.serialNumber = serialNumber;
-            this.engineType = engineType;
+            this.type = type;
+        }
+
+        public string GetInfo()
+        {
+            return $"power: {power} hp, volume: {volume} litres " +
+                $"type: {type}, serial number: {serialNumber}";
         }
     }
 }

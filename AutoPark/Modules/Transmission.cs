@@ -1,21 +1,24 @@
 ﻿using AutoPark.Enums;
 using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace AutoPark.Modules
 {
     class Transmission
     {
         public string madeBy;
         public byte numberOfGears;
-        public TransmissionType transmissionType;
+        public TransmissionType type;
 
-        public Transmission(byte numberOfGears, string madeBy, TransmissionType transmissionType)
+        public Transmission(byte numberOfGears, string madeBy, TransmissionType type)
         {
             this.numberOfGears = numberOfGears;
             this.madeBy = madeBy;
-            this.transmissionType = transmissionType;
+            this.type = type;
+        }
+
+        public string GetInfo()
+        {
+            return $"{numberOfGears} gears, type: {type}, " +
+                $"is made by {madeBy}";
         }
     }
 }

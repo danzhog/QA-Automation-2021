@@ -1,22 +1,19 @@
 ﻿using AutoPark.Modules;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AutoPark.Entities
 {
     class Bus : Vehicle
     {
         public int passengerСapacity;
-        public Bus(Engine engine, Transmission transmission, Chassis chassis, int passengerСapacity)
-            : base(engine, transmission, chassis)
+        public Bus(string mark, string model, Engine engine, Transmission transmission, Chassis chassis, int passengerСapacity)
+            : base(mark, model, engine, transmission, chassis)
         {
             this.passengerСapacity = passengerСapacity;
         }
 
         public override string GetFullInfo()
         {
-            return "This bus " + base.GetFullInfo() + " and passenger capcity: " + passengerСapacity + " people.";
+            return "Bus " + base.GetFullInfo() + " and passenger capcity: " + passengerСapacity + " people.";
         }
     }
 }

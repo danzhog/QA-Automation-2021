@@ -19,6 +19,10 @@ namespace AutoPark
             this.chassis = chassis;
         }
 
+        /// <summary>
+        /// Сollects full information about specific vehicle
+        /// </summary>
+        /// <returns> Full info about vehicle in string </returns>
         public virtual string GetFullInfo()
         {
             return mark + " " + model + "\nEngine characteristics: " + engine.GetInfo() 

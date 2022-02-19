@@ -23,7 +23,7 @@ namespace VideoStore
             Console.WriteLine($"№\t {"Movie Title",-15}\t {"Is available?",-15}\tWho took?");
             for (int i = 0; i < CassettesList.Count; i++)
             {
-                Console.WriteLine($"{i+1}\t {CassettesList[i].MovieTitle, -15}\t {CassettesList[i].isAvalaible, -15}" +
+                Console.WriteLine($"{i}\t {CassettesList[i].MovieTitle, -15}\t {CassettesList[i].isAvalaible, -15}" +
                     $"\t{CassettesList[i].PersonWhoTookTheCassette}");
             }
             Console.Write("\n");

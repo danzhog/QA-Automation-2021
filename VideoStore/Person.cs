@@ -12,15 +12,15 @@ namespace VideoStore
             Name = name;
         }
 
-        public void TakeСassette(Cassette cassette)
+        public void TakeСassette(int numberOfcassette, VideoStore videoStore)
         {
-            if (cassette.isAvalaible == true)
+            if (videoStore.CassettesList[numberOfcassette].isAvalaible == true)
             {
                 Console.WriteLine("You have successfully taken the cassette. Enjoy watching!\n");
-                cassette.PersonWhoTookTheCassette = Name;
-                cassette.isAvalaible = false;
+                videoStore.CassettesList[numberOfcassette].PersonWhoTookTheCassette = Name;
+                videoStore.CassettesList[numberOfcassette].isAvalaible = false;
             }
-            else if (cassette.PersonWhoTookTheCassette == Name)
+            else if (videoStore.CassettesList[numberOfcassette].PersonWhoTookTheCassette == Name)
             {
                 Console.WriteLine($"Sorry, the cassette has already been taken by you. " +
                     $"You can take another one.\n");
@@ -28,23 +28,24 @@ namespace VideoStore
             }
             else
             {
-                Console.WriteLine($"Sorry, the cassette has already been taken by {cassette.PersonWhoTookTheCassette}. " +
+                Console.WriteLine($"Sorry, the cassette has already been taken by " +
+                    $"{videoStore.CassettesList[numberOfcassette].PersonWhoTookTheCassette}. " +
                     $"Try to come back later or take another one.\n");
                 return;
             }
         }
 
-        public void HandOverСassette(Cassette cassette)
+        public void HandOverСassette(int numberOfcassette, VideoStore videoStoreName)
         {
-            if (cassette.PersonWhoTookTheCassette == Name)
+            if (videoStoreName.CassettesList[numberOfcassette].PersonWhoTookTheCassette == Name)
             {
                 Console.WriteLine("You have successfully handed over the cassette. We are waiting for you again!\n");
-                cassette.PersonWhoTookTheCassette = null;
-                cassette.isAvalaible = true;
+                videoStoreName.CassettesList[numberOfcassette].PersonWhoTookTheCassette = null;
+                videoStoreName.CassettesList[numberOfcassette].isAvalaible = true;
             }
             else
             {
-                Console.WriteLine($"Sorry, to hand over the tape, you must first take it.\n");
+                Console.WriteLine($"Sorry, to hand over the cassette, you must first take it.\n");
                 return;
             }
         }

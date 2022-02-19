@@ -28,6 +28,18 @@ namespace VideoStore
             magazin.AddCassetteToList(FastAndFurious);
 
             magazin.GetFullInfo();
+
+            KostyaKal.TakeСassette(SpiderMan);
+            VanyaGrach.TakeСassette(Avatar);
+            VasyaPupkin.TakeСassette(Avatar);
+            KostyaKal.TakeСassette(SpiderMan);
+
+            magazin.GetFullInfo();
+
+            VasyaPupkin.HandOverСassette(SpiderMan);
+            KostyaKal.HandOverСassette(SpiderMan);
+
+            magazin.GetFullInfo();
         }
     }
 }

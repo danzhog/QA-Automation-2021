@@ -7,11 +7,9 @@ namespace VideoStore
     public class Person
     {
         public string Name { get; set; }
-        public string Surname { get; set; }
-        public Person(string name, string surname)
+        public Person(string name)
         {
             Name = name;
-            Surname = surname;
         }
 
         public void TakeСassette(Cassette cassette)
@@ -19,12 +17,12 @@ namespace VideoStore
             if (cassette.isTaken == false)
             {
                 Console.WriteLine("You have successfully taken the cassette. Enjoy watching!");
-                cassette.PersonWhoTakeTheCassette = Name;
+                cassette.PersonWhoTookTheCassette = Name;
                 cassette.isTaken = true;
             }
             else
             {
-                Console.WriteLine($"Sorry, the cassette is already taken by {cassette.PersonWhoTakeTheCassette}. Try to come back later or take another one.");
+                Console.WriteLine($"Sorry, the cassette is already taken by {cassette.PersonWhoTookTheCassette}. Try to come back later or take another one.");
                 return;
             }
         }

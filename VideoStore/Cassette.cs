@@ -4,7 +4,12 @@
     {
         public string MovieTitle { get; set; }
         public bool isTaken = false;
-        public string PersonWhoTakeTheCassette = null;
+        public string PersonWhoTookTheCassette = null;
+
+        public Cassette(string movieTitle)
+        {
+            MovieTitle = movieTitle;
+        }
 
     }
 }

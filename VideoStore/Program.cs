@@ -9,33 +9,15 @@ namespace VideoStore
     {
         static void Main(string[] args)
         {
-            List<string> allLinesText = File.ReadAllLines("films.txt").ToList();
-            List<Cassette> spisok1 = new List<Cassette>();
+            List<string> filmsList = new List<string>();
+            Helper.ParseFromFile("films.txt", ref filmsList);
 
-            for (int i = 0; i < allLinesText.Count; i++)
-            {
-                spisok1.Add(new Cassette() {MovieTitle = allLinesText[i]});
-            }
+            List<Cassette> cassetesList = new List<Cassette>();
+            Helper.ConvertStringToCassette(filmsList, ref cassetesList);
 
-            Person VasyaPupkin = new Person("Vasya Pupkin");
-            Person VanyaGrach = new Person("Vanya Grach");
-            Person KostyaKal = new Person("Kostya Kalinin");
+            VideoStore ProkatMinsk = new VideoStore(cassetesList);
 
-            VideoStore ProkatMinsk = new VideoStore(spisok1);
-
-            ProkatMinsk.GetFullInfo();
-
-            KostyaKal.TakeСassette(0, ProkatMinsk);
-            VanyaGrach.TakeСassette(4, ProkatMinsk);
-            VasyaPupkin.TakeСassette(3, ProkatMinsk);
-            KostyaKal.TakeСassette(3, ProkatMinsk);
-
-            ProkatMinsk.GetFullInfo();
-
-            VasyaPupkin.HandOverСassette(2, ProkatMinsk);
-            KostyaKal.HandOverСassette(0, ProkatMinsk);
-
-            ProkatMinsk.GetFullInfo();
+            ProkatMinsk.Play();
         }
     }
 }

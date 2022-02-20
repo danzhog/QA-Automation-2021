@@ -20,10 +20,12 @@ namespace VideoStore
         public void GetFullInfo()
         {
             //Console.WriteLine("List of our Cassettes".PadLeft(49));
-            Console.WriteLine($"№\t {"Cassette Title",-15}\t {"Is available?",-15}\tWho took?");
+            Console.WriteLine($"№\t {"Cassette Title",-15}\t " +
+                $"{"Is available?",-15}\tWho took?");
             for (int i = 0; i < CassettesList.Count; i++)
             {
-                Console.WriteLine($"{i + 1}\t {CassettesList[i].MovieTitle,-15}\t {CassettesList[i].isAvalaible,-15}" +
+                Console.WriteLine($"{i + 1}\t {CassettesList[i].MovieTitle,-15}\t " +
+                    $"{CassettesList[i].isAvalaible,-15}" +
                     $"\t{CassettesList[i].PersonWhoTookTheCassette}");
             }
             Console.Write("\n");
@@ -109,7 +111,8 @@ namespace VideoStore
         {
             while (true)
             {
-                Console.Write("Enter your choice:\n1. View the list of available cassettes\n" +
+                Console.Write("Enter your choice:\n" +
+                    "1. View the list of available cassettes\n" +
                     "2. Take an available cassette\n" +
                     "3. Hand over the borrowed cassette\n" +
                     "4. Exit\n");
@@ -126,7 +129,8 @@ namespace VideoStore
         {
             if (CassettesList[numberOfcassette-1].isAvalaible == true)
             {
-                Console.WriteLine("You have successfully taken the cassette. Enjoy watching!\n");
+                Console.WriteLine("You have successfully taken the cassette. " +
+                    "Enjoy watching!\n");
                 CassettesList[numberOfcassette-1].PersonWhoTookTheCassette = person.Name;
                 CassettesList[numberOfcassette-1].isAvalaible = false;
             }
@@ -149,13 +153,15 @@ namespace VideoStore
         {
             if (CassettesList[numberOfcassette-1].PersonWhoTookTheCassette == person.Name)
             {
-                Console.WriteLine("You have successfully handed over the cassette. We are waiting for you again!\n");
+                Console.WriteLine("You have successfully handed over the cassette. " +
+                    "We are waiting for you again!\n");
                 CassettesList[numberOfcassette-1].PersonWhoTookTheCassette = null;
                 CassettesList[numberOfcassette-1].isAvalaible = true;
             }
             else
             {
-                Console.WriteLine($"Sorry, to hand over the cassette, you must first take it.\n");
+                Console.WriteLine($"Sorry, to hand over the cassette, " +
+                    $"you must first take it.\n");
                 return;
             }
         }

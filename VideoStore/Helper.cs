@@ -6,14 +6,14 @@ using System.Text;
 
 namespace VideoStore
 {
-    public class Helper
+    public static class Helper
     {
-        public static List<string> ParseFromFile(string pathToFile,ref List<string> filmsList)
+        public static List<string> ParseFromFile(string pathToFile, ref List<string> filmsList)
         {
             filmsList = File.ReadAllLines(pathToFile).ToList();
             return filmsList;
         }
-        public static List<Cassette> ConvertStringToCassette(List<string> filmsList, ref List<Cassette> cassetesList)
+        public static List<Cassette> ConvertStringListToCassetteList(List<string> filmsList, ref List<Cassette> cassetesList)
         {
             for (int i = 0; i < filmsList.Count; i++)
             {

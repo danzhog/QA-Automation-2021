@@ -13,7 +13,7 @@ namespace VideoStore
             Helper.ParseFromFile("films.txt", ref filmsList);
 
             List<Cassette> cassetesList = new List<Cassette>();
-            Helper.ConvertStringToCassette(filmsList, ref cassetesList);
+            Helper.ConvertStringListToCassetteList(filmsList, ref cassetesList);
 
             VideoStore ProkatMinsk = new VideoStore(cassetesList);
 

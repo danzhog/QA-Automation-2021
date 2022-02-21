@@ -12,14 +12,8 @@ namespace VideoStore
             CassettesList = cassettesList;
         }
 
-        public void AddCassetteToList(Cassette cassette)
+        private void GetFullInfo()
         {
-            CassettesList.Add(cassette);
-        }
-
-        public void GetFullInfo()
-        {
-            //Console.WriteLine("List of our Cassettes".PadLeft(49));
             Console.WriteLine($"№\t {"Cassette Title",-15}\t " +
                 $"{"Is available?",-15}\tWho took?");
             for (int i = 0; i < CassettesList.Count; i++)
@@ -30,6 +24,7 @@ namespace VideoStore
             }
             Console.Write("\n");
         }
+
         public void Play()
         {
             string userChoice;
@@ -125,7 +120,7 @@ namespace VideoStore
             }
         }
 
-        public void TakeСassette(int numberOfcassette, Person person)
+        private void TakeСassette(int numberOfcassette, Person person)
         {
             if (CassettesList[numberOfcassette-1].isAvalaible == true)
             {
@@ -149,7 +144,7 @@ namespace VideoStore
             }
         }
 
-        public void HandOverСassette(int numberOfcassette, Person person)
+        private void HandOverСassette(int numberOfcassette, Person person)
         {
             if (CassettesList[numberOfcassette-1].PersonWhoTookTheCassette == person.Name)
             {

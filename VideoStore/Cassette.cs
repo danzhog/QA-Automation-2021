@@ -2,7 +2,7 @@
 {
     public class Cassette
     {
-        public string MovieTitle { get; set; }
+        public string MovieTitle;
         public bool isAvalaible = true;
         public string PersonWhoTookTheCassette = null;
 

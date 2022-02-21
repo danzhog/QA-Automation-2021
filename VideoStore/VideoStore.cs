@@ -122,14 +122,15 @@ namespace VideoStore
 
         private void TakeСassette(int numberOfcassette, Person person)
         {
-            if (CassettesList[numberOfcassette-1].isAvalaible == true)
+            int newNumberOfcassette = numberOfcassette - 1;
+            if (CassettesList[newNumberOfcassette].isAvalaible == true)
             {
                 Console.WriteLine("You have successfully taken the cassette. " +
                     "Enjoy watching!\n");
-                CassettesList[numberOfcassette-1].PersonWhoTookTheCassette = person.Name;
-                CassettesList[numberOfcassette-1].isAvalaible = false;
+                CassettesList[newNumberOfcassette].PersonWhoTookTheCassette = person.Name;
+                CassettesList[newNumberOfcassette].isAvalaible = false;
             }
-            else if (CassettesList[numberOfcassette-1].PersonWhoTookTheCassette == person.Name)
+            else if (CassettesList[newNumberOfcassette].PersonWhoTookTheCassette == person.Name)
             {
                 Console.WriteLine($"Sorry, the cassette has already been taken by you. " +
                     $"You can take another one.\n");
@@ -138,7 +139,7 @@ namespace VideoStore
             else
             {
                 Console.WriteLine($"Sorry, the cassette has already been taken by " +
-                    $"{CassettesList[numberOfcassette-1].PersonWhoTookTheCassette}. " +
+                    $"{CassettesList[newNumberOfcassette].PersonWhoTookTheCassette}. " +
                     $"Try to come back later or take another one.\n");
                 return;
             }
@@ -146,12 +147,13 @@ namespace VideoStore
 
         private void HandOverСassette(int numberOfcassette, Person person)
         {
-            if (CassettesList[numberOfcassette-1].PersonWhoTookTheCassette == person.Name)
+            int newNumberOfcassette = numberOfcassette - 1;
+            if (CassettesList[newNumberOfcassette].PersonWhoTookTheCassette == person.Name)
             {
                 Console.WriteLine("You have successfully handed over the cassette. " +
                     "We are waiting for you again!\n");
-                CassettesList[numberOfcassette-1].PersonWhoTookTheCassette = null;
-                CassettesList[numberOfcassette-1].isAvalaible = true;
+                CassettesList[newNumberOfcassette].PersonWhoTookTheCassette = null;
+                CassettesList[newNumberOfcassette].isAvalaible = true;
             }
             else
             {

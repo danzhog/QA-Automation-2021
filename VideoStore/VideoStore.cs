@@ -12,6 +12,8 @@ namespace VideoStore
             CassettesList = cassettesList;
         }
 
+        delegate void TakeOrHandOverCassette(int numberOfcassette, Person person);
+
         private void GetFullInfo()
         {
             Console.WriteLine($"№\t {"Cassette Title",-15}\t " +
@@ -40,14 +42,14 @@ namespace VideoStore
                     case "2":
                         Console.Clear();
                         GetFullInfo();
-                        TakeCassetteFullWay();
+                        TakeOrHandOverCassetteFullWay(TakeСassette);
                         Console.ReadLine();
                         Console.Clear();
                         break;
                     case "3":
                         Console.Clear();
                         GetFullInfo();
-                        HandOverCassetteFullWay();
+                        TakeOrHandOverCassetteFullWay(HandOverСassette);
                         Console.ReadLine();
                         Console.Clear();
                         break;
@@ -56,20 +58,19 @@ namespace VideoStore
             }
         }
 
-        private void HandOverCassetteFullWay()
+        private void TakeOrHandOverCassetteFullWay(TakeOrHandOverCassette takeOrHandOver)
         {
-            int inputNumber;
             bool isInputOk = true;
             Console.Write("Print your Name and Surname: ");
             string nameSurname = Console.ReadLine();
             Person newUser = new Person(nameSurname);
-            Console.Write("Print the number of cassette you wanna hand over: ");
+            Console.Write("Print the number of cassette you wanna hand over/take: ");
             while (isInputOk)
             {
-                bool isInputNumberOk = Int32.TryParse(Console.ReadLine(), out inputNumber);
+                bool isInputNumberOk = Int32.TryParse(Console.ReadLine(), out int inputNumber);
                 if (isInputNumberOk && inputNumber <= CassettesList.Count && inputNumber > 0)
                 {
-                    HandOverСassette(inputNumber, newUser);
+                    takeOrHandOver(inputNumber, newUser);
                     isInputOk = false;
                 }
                 else
@@ -77,29 +78,6 @@ namespace VideoStore
                     Console.WriteLine("Invalid input.\nPlease, try again: ");
                 }
             }
-        }
-
-        private void TakeCassetteFullWay()
-        {
-            int inputNumber;
-            bool isInputOk = true;
-            Console.Write("Print your Name and Surname: ");
-            string nameSurname = Console.ReadLine();
-            Person newUser = new Person(nameSurname);
-            Console.Write("Print the number of cassette you wanna take: ");
-            while (isInputOk)
-            {
-                bool isInputNumberOk = Int32.TryParse(Console.ReadLine(), out inputNumber);
-                if (isInputNumberOk && inputNumber <= CassettesList.Count && inputNumber > 0)
-                {
-                    TakeСassette(inputNumber, newUser);
-                    isInputOk = false;
-                }
-                else
-                {
-                    Console.Write("Invalid input.\nPlease, try again: ");
-                }
-            }        
         }
 
         private string PromptUser()

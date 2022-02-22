@@ -12,7 +12,11 @@ namespace VideoStore
             CassettesList = cassettesList;
         }
 
-        delegate void TakeOrHandOverCassette(int numberOfcassette, Person person);
+        private delegate void TakeOrHandOverCassette(int numberOfcassette, Person person);
+        private delegate void ShowMessage();
+
+        private void ShowMessageTakeCassette() => Console.Write("Print the number of cassette you wanna take: ");
+        private void ShowMessageHandOverCassette() => Console.Write("Print the number of cassette you wanna hand over: ");
 
         private void GetFullInfo()
         {
@@ -42,14 +46,14 @@ namespace VideoStore
                     case "2":
                         Console.Clear();
                         GetFullInfo();
-                        TakeOrHandOverCassetteFullWay(TakeСassette);
+                        TakeOrHandOverCassetteFullWay(TakeСassette, ShowMessageTakeCassette);
                         Console.ReadLine();
                         Console.Clear();
                         break;
                     case "3":
                         Console.Clear();
                         GetFullInfo();
-                        TakeOrHandOverCassetteFullWay(HandOverСassette);
+                        TakeOrHandOverCassetteFullWay(HandOverСassette, ShowMessageHandOverCassette);
                         Console.ReadLine();
                         Console.Clear();
                         break;
@@ -58,13 +62,13 @@ namespace VideoStore
             }
         }
 
-        private void TakeOrHandOverCassetteFullWay(TakeOrHandOverCassette takeOrHandOver)
+        private void TakeOrHandOverCassetteFullWay(TakeOrHandOverCassette takeOrHandOver, ShowMessage showMessage)
         {
             bool isInputOk = true;
             Console.Write("Print your Name and Surname: ");
             string nameSurname = Console.ReadLine();
             Person newUser = new Person(nameSurname);
-            Console.Write("Print the number of cassette you wanna hand over/take: ");
+            showMessage();
             while (isInputOk)
             {
                 bool isInputNumberOk = Int32.TryParse(Console.ReadLine(), out int inputNumber);
